@@ -145,9 +145,13 @@ python manage.py migrate
 # 1. Criação de credenciais Google OAuth
 Vá para o [Google API Console](https://console.developers.google.com/) e faça login usando sua conta do Google.
 1. Na lista de projetos, caso ainda não tenha nenhum projecto associado à cadeira clique em “Novo Projeto” para criar um novo projeto de API do Google. Dê o nome ao projeto (PW-OAUth) e deixe o local como “Sem Organização”, a seguir clique em criar.
+
 ![image](./images/project_setup.png)
+
 2. Após criar o projeto, será redirecionado para o painel. Vá para a seção Credenciais, clique no botão Criar credenciais e selecione “ID do cliente OAuth” no menu.
+
 ![image](./images/oauth_client_id.png)
+
 3. Configurar o ecrã de consentimento
     1. O ecrã de consentimento é a ecrã que é mostrado ao utilizador quando o mesmo faz login usando o google.
     2. Escolha o tipo de utilizador como externo e clique em Avançar
