@@ -3,7 +3,7 @@ Universidade Lusófona
 
 # TPC teórico: Autenticação via OAuth (Social Login)
 
-Este TPC teórico deverá ser entegue até dia 31 de maio.
+Este TPC teórico deverá ser entregue até dia 31 de maio.
 
 ### Objetivo:
 * Familiarizar-se com a autenticação usando social login como o Google
