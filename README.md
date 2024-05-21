@@ -159,7 +159,7 @@ Vá para o [Google API Console](https://console.developers.google.com/) e faça 
         5. Resume, criar.
 4. Agora vá novamente para Credenciais -> Criar credenciais -> ID do cliente OAuth
     1. Selecione “Tipo de aplicativo” como aplicativo da Web e dê um nome ao seu cliente.
-    2. De um nome à aplicação. Exemplo: django-gmaii-api.
+    2. De um nome à aplicação. Exemplo: django-gmail-api.
     3. Deixe Origens JavaScript autorizadas em branco.
     4. Em URIs de redirecionamento autorizados, adicione o vosso root url do Pythonanywhere https://xxxxx.pythonanywhere.com/accounts/google/login/callback/
         - # Exemplo: https://p5617.pythonanywhere.com/accounts/google/login/callback/
@@ -168,10 +168,10 @@ Vá para o [Google API Console](https://console.developers.google.com/) e faça 
         - ![image](./images/client_id_gen.png)
 
 # 2. Configurar o django-admin
-1.  Aceda ao portal de admin https://xxxxx.pythonanywhere.com/admmin
+1.  Aceda ao portal de admin https://xxxxx.pythonanywhere.com/admin
 2. Na entiadade de Social Applications -> ADICIONAR uma nova social application, insirindo os seguintes valores nos seguintes campos:
     - Provedor: Google
-    - Nome: <Nome do aplicativo web> exempplo: django-gmaii-api
+    - Nome: <Nome do aplicativo web> exemplo: django-gmail-api
     - ID do cliente: <ID do cliente gerado no console da API>
     - Chave secreta: <Segredo do cliente gerado no console da API>\
     - ![image](./images/add_social_app.png)
