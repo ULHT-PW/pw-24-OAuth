@@ -191,6 +191,8 @@ Vá para o [Google API Console](https://console.developers.google.com/) e faça 
 
     <a href="{% url 'login' %}"><button>Login</button></a>
     <!-- Novo botão -->
+    {% load socialaccount %}
+    {% providers_media_js %}
     <a href="{% provider_login_url 'google' %}"><button>Login with Google<button></a>
 ```
 2. No ficheiro user.html podemos adicionar um pouco mais de informação sobre o utilizador autenticado.
@@ -231,7 +233,7 @@ def login_view(request):
             })
 
             return render(request, 'autenticacao/login.html')
-
+    # adicionar
     if request.user.is_authenticated:
         return render(request, 'autenticacao/user.html')
     else:
