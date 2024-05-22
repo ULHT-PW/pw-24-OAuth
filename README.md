@@ -51,7 +51,7 @@ O OAuth 2.0 é amplamente adotado na indústria e fornece uma estrutura segura e
 1. Primeiro, instale a seguinte biblioteca python na console do Pythonanywhere com o selector na root do projecto:
 
 ```bash
-pip install django-allauth[socialaccount]
+pip install django-allauth
 ```
 
 2. No ficheiro `project/settings.py`, editar as seguintes variavéis de configuração. Atenção para não adicionar variaveis replicadas p.f. validar se as mesmas já existem e garatinr que têm as dependencias infra mencionadas. 
@@ -117,6 +117,7 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
+# colocar path para view de login
 LOGIN_REDIRECT_URL = '/autenticacao/login/'
 LOGOUT_REDIRECT_URL = '/autenticacao/login/'
 ```
@@ -158,7 +159,7 @@ Vá para o [Google API Console](https://console.developers.google.com/) e faça 
     3. Insira os seguintes valores nos seguintes campos:
         1. Nome da aplicação: ULHT-PW-OAuth
         2. Email para suporte do utilizador: O vosso email.
-        3. Domínios autorizados: (o vooso root link da conta Pythonanaywhere) -> xxxxx.pythonanywhere.com (exempplo -> p5617.pythonanywhere.com)
+        3. Domínios autorizados: (o vosso root link da conta Pythonanaywhere) -> xxxxx.pythonanywhere.com (exempplo -> p5617.pythonanywhere.com)
         4. Fazer seguinte sem adicionar informação em Escopos e Usuários de testes.
         5. Resume, criar.
 4. Agora vá novamente para Credenciais -> Criar credenciais -> ID do cliente OAuth
@@ -233,6 +234,7 @@ def login_view(request):
             })
 
             return render(request, 'autenticacao/login.html')
+
     # adicionar
     if request.user.is_authenticated:
         return render(request, 'autenticacao/user.html')
